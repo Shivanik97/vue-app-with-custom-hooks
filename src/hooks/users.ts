@@ -19,7 +19,7 @@ export interface User {
   address: Address
 }
 export default async function useUserss() {
-  const { response: users, request } = useApi<User[]>('https://jsonplaceholder.typicode.com/users')
+  const { response: users, request } = useApi('https://jsonplaceholder.typicode.com/users')
   const loaded = ref(false)
   if (loaded.value === false) {
     await request()
