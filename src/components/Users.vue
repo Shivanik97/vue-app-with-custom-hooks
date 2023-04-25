@@ -23,16 +23,9 @@
         </table>
     </div>
 </template>
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import useUsers from "@/hooks/users";
-export default defineComponent({
-    name: "Users",
-    async setup() {
-        const { users } = await useUsers();
-        return { users };
-    },
-});
+const { users } = await useUsers();
 </script>
   <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
